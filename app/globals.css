@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+
+body {
+  background: #020617;
+  color: #f1f5f9;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+
+/* Animate in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeUp 0.25s ease forwards; }
+
+@keyframes slideInBottom {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.slide-in-from-bottom-2 { animation: slideInBottom 0.2s ease forwards; }
+.slide-in-from-bottom-4 { animation: slideInBottom 0.25s ease forwards; }
+.fade-in { animation: fadeUp 0.2s ease forwards; }
